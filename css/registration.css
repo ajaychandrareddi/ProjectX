@@ -14,11 +14,11 @@
 
 .container
 {
-	width: 460px;
+	width: 400px;
 }
 
 .input{
-	width: 300px;
+	width: 380px;
 }
 
 .field:hover .hint{

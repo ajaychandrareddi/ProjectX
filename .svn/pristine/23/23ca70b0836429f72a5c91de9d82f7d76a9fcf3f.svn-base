@@ -11,12 +11,16 @@
 	float: left;
 	width: 500px;
 }
-.container{
-	width: 400px;
+
+.container
+{
+	width: 460px;
 }
+
 .input{
-	width: 380px;
+	width: 300px;
 }
+
 .field:hover .hint{
 	margin: -30px 0 0 450px;
 }

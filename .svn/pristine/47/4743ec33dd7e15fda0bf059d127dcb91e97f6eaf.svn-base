@@ -1,18 +1,13 @@
 @CHARSET "ISO-8859-1";
 
-a{
-	text-align: center;
-	font-family: Arial;
-	font-size: 14px;
-}
 
 label{
 	display: block;
-	float: right;
+	float: left;
 	font-weight: bold;
 	margin-right: 10px;
-	text-align: left;
-	width: 365px;
+	text-align: right;
+	width: 120px;
 	line-height: 25px;
 	font-size: 15px;
 	color: white;
@@ -47,7 +42,7 @@ label{
 }
 
 .field{
-	margin-bottom: 12px;
+	margin-bottom: 7px;
 }
 
 .field:hover .hint{
@@ -76,8 +71,7 @@ label{
 }
 .input:focus{
 	background-color: white;
-}
 
 .checkbox{
-	margin-top: 7px;
+	margin 20px auto;
 }

@@ -1,9 +1,10 @@
 <?php 
 session_start();
-//	include("includes/connect.php");
+
 	include("../includes/html_codes.php");
 	
-if (isset($_POST['submit'])){
+if (isset($_POST['submit']))
+	{
 		$error = array();
 		
 		//username check
@@ -23,25 +24,16 @@ if (isset($_POST['submit'])){
 		}
 	
 		if (empty($error)){
-			$result = mysqli_query($mysql_connect, "SELECT * FROM USERS WHERE USERNAME='$username' AND PASSWORD ='$password'") or die(mysql_error());
-			if (mysqli_num_rows($result)==1){
-				while ($row = mysqli_fetch_array($result)){
-					$_SESSION['user_id'] = $row['user_id'];
-					header('Location:account_itemsactive.php');
-				}
-			} else {
-				$error_message = '<span class="error">Username or Password is Incorrect. </span> <br/><br/>';
-			}
+		// Here goes code to navigate to next page
 		} else {
-			$error_message = '<span class="error">';
-			foreach ($error as $key => $values){
-				$error_message .= "$values";
-			}
-			$error_message .= '</span><br></br>';
-		}
+ 			$error_message = '<span class="error">';
+ 			foreach ($error as $key => $values){
+ 			$error_message .= "$values";
+ 			}
+ 			$error_message .= '</span><br></br>'; 
+ 		}
 	}
 ?>
-
 <!DOCTYPE html>
 <html lang="en"> 
   <head>
@@ -58,15 +50,16 @@ if (isset($_POST['submit'])){
   			</aside>
   			<section id="right_side">
   				<form id="generalform" class="container" method="POST" action="">
-  				<h3>Welcome to StreetView</h3>
-  				<h4>Login</h4>
+  				<h3>Welcome to PreLaunch Buzzzzz!...</h3>
   				<?php echo @$error_message; ?>
   					<div class="field">
-  						<input type="text" id="username" name="username" class="input" placeholder="Enter Username" maxlength="20">
+  						<label for="username">Username: </label>
+  						<input type="text" id="username" name="username" class="input"  maxlength="20">
   					</div>
    					<div class="field">
-  						<input type="password" id="password" name="password" class="input" placeholder="Enter Password"  maxlength="20">
-  					</div><br/>
+  						<label for="password">Password: </label>
+  						<input type="password" id="password" name="password" class="input"  maxlength="20">
+  					</div>
   				  <input type="submit" id="submit" name="submit" value="Submit" class="button">	 
   				  <a href="forgotpassword.php">Don't Know Your Password?</a>			
   				</form>

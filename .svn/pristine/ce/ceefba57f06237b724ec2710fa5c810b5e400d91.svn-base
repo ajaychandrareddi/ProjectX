@@ -8,11 +8,11 @@ a{
 
 label{
 	display: block;
-	float: right;
+	float: left;
 	font-weight: bold;
 	margin-right: 10px;
-	text-align: left;
-	width: 365px;
+	text-align: right;
+	width: 120px;
 	line-height: 25px;
 	font-size: 15px;
 	color: white;
@@ -47,7 +47,7 @@ label{
 }
 
 .field{
-	margin-bottom: 12px;
+	margin-bottom: 7px;
 }
 
 .field:hover .hint{
@@ -79,5 +79,5 @@ label{
 }
 
 .checkbox{
-	margin-top: 7px;
+	margin-top: 5px;
 }
