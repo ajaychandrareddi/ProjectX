@@ -1,6 +1,6 @@
 <?php 
 session_start();
-//	include("includes/connect.php");
+	include("../includes/dbconnect.php");
 	include("../includes/html_codes.php");
 	
 if (isset($_POST['submit'])){
@@ -21,14 +21,18 @@ if (isset($_POST['submit'])){
 		} else {
 			$password = $_POST['password'];
 		}
-	
+
 		if (empty($error)){
-			$result = mysqli_query($mysql_connect, "SELECT * FROM USERS WHERE USERNAME='$username' AND PASSWORD ='$password'") or die(mysql_error());
+			$result = mysqli_query($mysql_connect, "SELECT * FROM TEMPUSERS WHERE USERNAME='$username'") or die(mysql_error());
 			if (mysqli_num_rows($result)==1){
-				while ($row = mysqli_fetch_array($result)){
-					$_SESSION['user_id'] = $row['user_id'];
-					header('Location:account_itemsactive.php');
-				}
+				    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+					$_SESSION['user_id'] = $row['USER_ID'];
+					$hash = trim($row['PASSWORD']);
+				    }
+				    if (password_verify($password, $hash)){
+				    	header('Location:account_itemsactive.php');
+				    } else
+				    	$error_message = '<span class="error">Password is Incorrect. </span> <br/><br/>';
 			} else {
 				$error_message = '<span class="error">Username or Password is Incorrect. </span> <br/><br/>';
 			}

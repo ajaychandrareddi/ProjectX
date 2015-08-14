@@ -2,7 +2,7 @@
 
  session_start();
  	
-// 	include("../includes/dbconnect.php");
+ 	include("../includes/dbconnect.php");
  	include("../includes/html_codes.php");
  	
 if (isset($_POST['submit']))
@@ -35,8 +35,10 @@ if (isset($_POST['submit']))
  		}
  		
  		//Industry Professional Check
- 		if (isset($_POST['ispro'])){
- 			
+ 		if (isset($_POST['role'])){
+ 			$role = '3';
+ 		} else {
+ 			$role = '2';
  		}
   
  		if (empty($error))
@@ -44,9 +46,13 @@ if (isset($_POST['submit']))
  			$result = mysqli_query($mysql_connect, "SELECT * FROM USERS WHERE USERNAME='$username' OR EMAIL='$email'") or die(mysql_error());
  			if (mysqli_num_rows($result) == 0){
  				$activation = md5(uniqid(rand(), true));
- 				$result2 = mysqli_query($mysql_connect,"INSERT INTO TEMPUSERS (USER_ID, USERNAME, EMAIL, PASSWORD, ACTIVATION, UPDATED_TIMESTAMP, CREATED_TIMESTAAMP) VALUES ('', '$username', '$email', '$password', '$activation', NOW(), NOW())");
+ 				$options = [
+ 						'cost' => 8,
+ 				];
+ 				$password = password_hash($password, PASSWORD_BCRYPT, $options)."\n";
+ 				$result2 = mysqli_query($mysql_connect,"INSERT INTO tempusers (USERNAME, ROLE, EMAIL, PASSWORD, ACTIVATION, UPDATED_TIMESTAMP, CREATED_TIMESTAMP) VALUES ('$username', '$role', '$email', '$password', '$activation', now(), now())");
  				if (!$result2){
- 					die('Could not insert into database: ' .mysql_error());
+ 					die('Could not insert into database: ' .mysqli_error($mysql_connect));
  				} else {
  					$message = "To activate your account, please click on the link: \n\n";
  // PROPER URL SHOULD BE GIVEN HERE
@@ -100,8 +106,8 @@ if (isset($_POST['submit']))
   						<p class="hint">20 characters maximum</p>
   					</div>
   					<div class="field">
-  					    <input type="checkbox" id="ispro" name="ispro" class="checkbox">
-  					    <label for="password">I am an Industry Professional</label>
+  					    <input type="checkbox" id="role" name="role" class="checkbox">
+  					    <label for="role">I am an Industry Professional</label>
   					</div><br/>
   				  <input type="submit" id="submit" name="submit" value="Submit" class="button">	 					
   				</form>
