@@ -30,7 +30,7 @@ if (isset($_POST['submit'])){
 					$hash = trim($row['PASSWORD']);
 				    }
 				    if (password_verify($password, $hash)){
-				    	header('Location:account_itemsactive.php');
+				    	header('Location:mainLanding.php');
 				    } else
 				    	$error_message = '<span class="error">Password is Incorrect. </span> <br/><br/>';
 			} else {

@@ -43,7 +43,7 @@ if (isset($_POST['submit']))
   
  		if (empty($error))
  		{
- 			$result = mysqli_query($mysql_connect, "SELECT * FROM USERS WHERE USERNAME='$username' OR EMAIL='$email'") or die(mysql_error());
+ 			$result = mysqli_query($mysql_connect, "SELECT * FROM TEMPUSERS WHERE USERNAME='$username' OR EMAIL='$email'") or die(mysql_error());
  			if (mysqli_num_rows($result) == 0){
  				$activation = md5(uniqid(rand(), true));
  				$options = [
