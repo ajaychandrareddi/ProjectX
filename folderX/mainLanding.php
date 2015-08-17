@@ -1,3 +1,5 @@
+
+
 <?php 
 session_start();
 	include("../includes/dbconnect.php");
@@ -5,8 +7,16 @@ session_start();
 	include("../includes/form_functions.php");
 	
 ?>
+
 <!DOCTYPE html>
 <html lang="en"> 
+	<SCRIPT>
+	function reload(form)
+	{
+		var state=form.state.options[form.state.options.selectedIndex].value;
+		self.location='mainLanding.php?state=' + state ;
+	}
+</script>
   <head>
   	<title>Register</title>
   	<link rel="stylesheet" href="../css/main.css">
@@ -27,3 +37,4 @@ session_start();
   	<?php footerCode(); ?>
   </body>
  </html>
+ 
