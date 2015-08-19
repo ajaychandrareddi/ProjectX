@@ -1,6 +1,6 @@
 <?php
 
-require ("dbconnect.php");
+include("dbconnect.php");
 
 function parseToXML($htmlStr)
 {
@@ -18,20 +18,20 @@ if (!$result) {
   die('Invalid query: ' . mysql_error());
 }
 
-//header("Content-type: text/xml");
+header("Content-type: text/xml");
 
 // Start XML file, echo parent node
 echo '<markers>';
 
 // Iterate through the rows, printing XML nodes for each
-while ($row = @mysqli_fetch_array($result, MYSQLI_ASSOC)){
+while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
   // ADD TO XML DOCUMENT NODE
   echo '<marker ';
-  echo 'name="' . parseToXML($row['name']) . '" ';
-  echo 'address="' . parseToXML($row['address']) . '" ';
-  echo 'latitude="' . $row['latitude'] . '" ';
-  echo 'longitude="' . $row['longitude'] . '" ';
-  echo 'type="' . $row['type'] . '" ';
+  echo 'name="' . parseToXML($row['NAME']) . '" ';
+  echo 'address="' . parseToXML($row['ADDRESS']) . '" ';
+  echo 'latitude="' . $row['LATITUDE'] . '" ';
+  echo 'longitude="' . $row['LONGITUDE'] . '" ';
+  echo 'type="' . $row['TYPE'] . '" ';
   echo '/>';
 }
 

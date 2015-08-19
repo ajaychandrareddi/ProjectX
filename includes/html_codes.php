@@ -9,8 +9,31 @@ function headerAndSearchCode(){
 	topRightLinks();
 	echo "
 			</div>
-		<a href=\"mainLanding.php\"><img src=\"C:/Xampp/htdocs/ProjectX/images/home.png\"></a>
-		</header>
+		<div id='cssmenu'>
+			<ul>
+			   <li><a href='#'><span>Buy</span></a></li>
+			   <li class='active has-sub'><a href='#'><span>Sell</span></a>
+			      <ul>
+			         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+			            <ul>
+			               <li><a href='#'><span>Sub Product</span></a></li>
+			               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+			            </ul>
+			         </li>
+			         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+			            <ul>
+			               <li><a href='#'><span>Sub Product</span></a></li>
+			               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+			            </ul>
+			         </li>
+			      </ul>
+			   </li>
+			   <li><a href='#'><span>Rent</span></a></li>
+			   <li><a href='#'><span>Home Loans</span></a></li>
+			   <li><a href='#'><span>Find an Agent</span></a></li>
+			   <li><a href='#'><span>More</span></a></li>
+			</ul>
+		</div>
 		";
 }
 
