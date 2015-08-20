@@ -11,27 +11,42 @@ function headerAndSearchCode(){
 			</div>
 		<div id='cssmenu'>
 			<ul>
-			   <li><a href='#'><span>Buy</span></a></li>
-			   <li class='active has-sub'><a href='#'><span>Sell</span></a>
-			      <ul>
+			   <li class='active has-sub'><a href='#'><span>Buy</span></a>
+				  <ul>
 			         <li class='has-sub'><a href='#'><span>Product 1</span></a>
-			            <ul>
-			               <li><a href='#'><span>Sub Product</span></a></li>
-			               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-			            </ul>
-			         </li>
-			         <li class='has-sub'><a href='#'><span>Product 2</span></a>
-			            <ul>
-			               <li><a href='#'><span>Sub Product</span></a></li>
-			               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-			            </ul>
 			         </li>
 			      </ul>
 			   </li>
-			   <li><a href='#'><span>Rent</span></a></li>
-			   <li><a href='#'><span>Home Loans</span></a></li>
-			   <li><a href='#'><span>Find an Agent</span></a></li>
-			   <li><a href='#'><span>More</span></a></li>
+			   <li class='active has-sub'><a href='#'><span>Sell</span></a>
+			      <ul>
+			         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+			         </li>
+			      </ul>
+			   </li>
+			   <li class='active has-sub'><a href='#'><span>Rent</span></a>
+				  <ul>
+			         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+			         </li>
+			      </ul>
+			   </li>
+			   <li class='active has-sub'><a href='#'><span>Home Loans</span></a>
+				  <ul>
+			         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+			         </li>
+			      </ul>
+			   </li>
+			   <li class='active has-sub'><a href='#'><span>Find an Agent</span></a>
+				  <ul>
+			         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+			         </li>
+			      </ul>
+			   </li>
+			   <li class='active has-sub'><a href='#'><span>More</span></a>
+				  <ul>
+			         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+			         </li>
+			      </ul>
+			   </li>
 			</ul>
 		</div>
 		";
