@@ -3,7 +3,7 @@
 <?php 
 session_start();
 	include("../includes/dbconnect.php");
-	include("../includes/html_codes.php");
+	include("../includes/CopyOfhtml_codes.php");
 	include("../includes/form_functions.php");
 	
 ?>
@@ -19,7 +19,7 @@ session_start();
 </script>
   <head>
   	<title>Register</title>
-  	<link rel="stylesheet" href="../css/main.css">
+  	<link rel="stylesheet" href="../css/Copy of main.css">
   	<link rel="stylesheet" href="../css/forms.css">
   </head>
   <body id="wrapper">

@@ -1,81 +1,14 @@
 @CHARSET "ISO-8859-1";
 
 *{
-
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
-}
 
-body{
-	text-align: center;
-	font-family: Arial;
-	font-size: 12px;
-	color: #303030;
-}
-
-header,nav,section,aside,footer{
-	display: block;
-}
-
-img{
-	border: none;
-}
-
-h2{/*Dark gray titles*/
-	font-family: Arial;
-	font-size: 14px;
-	color: #404040;
-}
-h3{/*for Welcome Messages*/
-	margin-bottom:25px;
-	text-align: center;
-	font-size: 28px;
-	color: white;
-	text-shadow:1px 1px 3px #080808;
-}
-h4{/*for titles*/
-	margin-bottom:15px;
-	font-size: 18px;
-	color: white;
-	text-shadow:1px 1px 3px #080808;
-}
-h5{/*address prompt*/
-	text-align: center;
-	font-family: Arial;
-	font-size: 14px;
-	color: #404040;
-}
-h6{/*address in shipping info*/
-	text-align: center;
-	font-family: Arial;
-	font-size: 14px;
-	font-weight: normal;
-	color: #606060;
-}
-
-table{
-	width: 100%;
-	text-align: center;
-}
-th{
-	color: #888888;
-	font-weight: normal;
-	text-decoration: underline;
-}
-td{
-	padding: 3px 10px;
-}
-
-#wrapper{
-	width: 1000px;
-	margin: 15px auto 0px;
-	text-align: left;
 }
 
 #main_header{
 	/*space with logo and top links*/
-
 }
 
 #rightAlign{
@@ -83,28 +16,29 @@ td{
 	text-align: right;
 }
 
-#main_aside{
-	width: 208px;
-	margin-top: 10px;
-	margin-right: 10px;
-	border-width: 1px;
-	float: left;
+#cssheader{
+	width: 1000px;
 }
 
-#main_section{
-	margin-top: 10px;
-	margin-bottom: 20px;
-	float: left;
-	width: 780px;
+#cssheader ul,
+#cssheader li,
+{
+  margin: 0px;
+  padding: 0;
+  position: relative;
 }
 
-#main_footer{
-	padding-top: 30px;
-	clear: both;
-	font-size: 10px;
+#cssheader ul {
+  list-style: none;
 }
 
-
+#cssheader > ul > li {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  border: 2px solid;
+  border-color: red;
+}
 
 #cssmenu ul,
 #cssmenu li,
