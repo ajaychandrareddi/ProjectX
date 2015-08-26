@@ -1,11 +1,11 @@
 <?php 
-	include("../includes/html_codes.php");
+	include("../includes/CopyOfhtml_codes.php");
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
   <head>
-  	<title>Register</title>
-  	<link rel="stylesheet" href="../css/main.css">
+  	<title>Template</title>
+  	<link rel="stylesheet" href="../css/Copy of main.css">
   </head>
   <body id="wrapper">
   	<?php headerAndSearchCode(); ?>

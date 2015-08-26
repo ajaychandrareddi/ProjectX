@@ -3,12 +3,12 @@
 //Code for Header and Search bar
 function headerAndSearchCode(){
     echo "
-<header id=\"cssheader\">
+<header id=\"headerContainer\">
     	<ul>
-    		<li>
-    			<img src=\"C:\xampp\htdocs\ProjectX\images\home.png\">
+    		<li id=\"headerLeft\">
+    			<img src=\"C:/xampp/htdocs/ProjectX/images/home.png\">
     		</li>
-    		<li>
+    		<li id=\"headerCenter\">
 				<div id='cssmenu'>
 					<ul>
 					   <li class='active has-sub'><a href='#'><span>Buy</span></a>
@@ -50,22 +50,21 @@ function headerAndSearchCode(){
 					</ul>
 				</div>
     		</li>
-    		<li>
-    			<div id=\"rightAlign\">
+    		<li id=\"headerRight\">
+    			<div id=\"headerRightClearfloat\">
 		";
     		topRightLinks();
 		echo '
 				</div>
 			</li>
 		</ul>
-	</div>
 </header>';
 }
 
 //Code for Footer bar
 function footerCode(){
 	echo '
-			<footer id="main_footer">
+			<footer id="footerContainer">
 				<table>
 					<tr>
 						<td>link1</td>

@@ -7,38 +7,57 @@
 
 }
 
-#main_header{
-	/*space with logo and top links*/
-}
-
-#rightAlign{
-	float: right;
-	text-align: right;
-}
-
-#cssheader{
+#wrapper{
 	width: 1000px;
+	margin: 15px auto 0px;
+	text-align: left;
 }
 
-#cssheader ul,
-#cssheader li,
+#headerContainer ul,
+#headerContainer li
 {
   margin: 0px;
   padding: 0;
   position: relative;
 }
 
-#cssheader ul {
+#headerContainer ul {
   list-style: none;
 }
 
-#cssheader > ul > li {
+#headerContainer > ul > li {
   display: inline-block;
   float: left;
+  clear: right;
   margin: 0;
-  border: 2px solid;
-  border-color: red;
 }
+
+#headerLeft {
+	width: 10%;
+	float: left;
+}
+
+#headerCenter {
+	width: 70%;
+}
+
+#headerRight {
+   width: 20%;
+   float: right;
+}
+
+#headerRightClearfloat{
+  float: right;
+  padding: 19px 20px;
+  font-size: 14px;
+}
+
+#footerContainer{
+	padding-top: 30px;
+	clear: both;
+	font-size: 10px;
+}
+
 
 #cssmenu ul,
 #cssmenu li,
